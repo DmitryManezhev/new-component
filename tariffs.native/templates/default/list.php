@@ -279,4 +279,3 @@ function updateBasketCounter(count) {
     }
 }
 </script>
-
