@@ -10,7 +10,7 @@ $arIBlocks = [];
 if (CModule::IncludeModule('iblock')) {
     $rsIBlock = CIBlock::GetList(['SORT' => 'ASC'], ['ACTIVE' => 'Y']);
     while ($arr = $rsIBlock->Fetch()) {
-        $arIBlocks[$arr['ID']] = '[' . $arr['ID'] . '] ' . $arr['NAME'];
+        $arIBlocks[$arr['ID']] = '[' . $arr['ID'] . '] ' . $arr['NAME'];    
     }
 }
 
