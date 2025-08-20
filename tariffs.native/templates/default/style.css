@@ -1,4 +1,4 @@
-    /* Общие переменные для обоих шаблонов */
+/* Общие переменные для обоих шаблонов */
 :root {
     --tariff-md-sys-color-primary: #18bb44;
     --tariff-md-sys-color-on-primary: #FFFFFF;
@@ -23,33 +23,23 @@
     --tariff-md-sys-button-height: 40px;
 }
 
-
 .tariffs-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 20px;
     margin: 0;
     padding: 0;
+    align-items: stretch;           /* <-- добавлено */
 }
 
 .tariff-card {
-    display: flex;
-    flex-direction: column;
+    display: flex;                  /* <-- добавлено */
+    flex-direction: column;         /* <-- добавлено */
     background: var(--tariff-md-sys-color-surface);
     border-radius: var(--tariff-md-sys-shape-corner-medium);
     border: 1px solid #e0e0e0;
     overflow: hidden;
-
     transition: transform .2s, box-shadow .2s;
-}
-.tariff-price {
-    gap: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
 }
 .tariff-card:hover {
     transform: translateY(-4px);
@@ -57,9 +47,13 @@
 }
 
 .tariff-card-inner-wrapper {
-padding: 15px;
+    padding: 15px;
+    flex: 1 1 auto;                /* <-- добавлено */
+    display: flex;                 /* <-- добавлено */
+    flex-direction: column;        /* <-- добавлено */
 }
-/* Детальный тариф */
+
+/* Детальный тариф (не изменялся) */
 .tariff-card-detail {
     display: flex;
     flex-direction: column;
@@ -69,36 +63,31 @@ padding: 15px;
     padding: 24px;
     gap: 16px;
 }
-
 .tariff-card-detail .tariff-title {
     font-size: var(--tariff-md-sys-typescale-headline-medium-size);
     font-weight: var(--tariff-md-sys-typescale-headline-medium-weight);
 }
-
 .tariff-card-detail .tariff-description,
 .tariff-card-detail .tariff-features li {
     font-size: var(--tariff-md-sys-typescale-body-medium-size);
     font-weight: var(--tariff-md-sys-typescale-body-medium-weight);
 }
+
 /* цены */
-
 .price-value {
-
-color: var(--tariff-md-sys-color-primary);
-font-size: 24px;
+    color: var(--tariff-md-sys-color-primary);
+    font-size: 24px;
     font-weight: 500;
 }
 .price-period {
-
-font-size: 24px;
-
+    font-size: 24px;
 }
+
 /* кнопки */
-.button-nav
- {
-margin-bottom: 15px !important;
-
+.button-nav {
+    margin-bottom: 15px !important;
 }
+
 .tariff-actions {
     display: flex;
     gap: 5px;
@@ -107,12 +96,13 @@ margin-bottom: 15px !important;
     align-content: center;
     justify-content: flex-start;
     align-items: stretch;
+    margin-top: auto;              /* <-- добавлено */
 }
+
 .tariff-btn-primary {
     background: var(--tariff-md-sys-color-primary);
     color: var(--tariff-md-sys-color-on-primary);
 }
-
 .tariff-btn-primary:hover {
     opacity: 0.9;
 }
@@ -143,13 +133,11 @@ margin-bottom: 15px !important;
     color: var(--tariff-md-sys-color-on-surface);
     transition: background 0.2s, color 0.2s, transform 0.1s;
 }
-
 .quantity-btn:hover {
     background: var(--tariff-md-sys-color-primary-container);
     color: var(--tariff-md-sys-color-on-primary-container);
     transform: scale(1.05);
 }
-
 .quantity-btn:active {
     transform: scale(0.95);
 }
@@ -173,12 +161,10 @@ margin-bottom: 15px !important;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
 }
-
 .btn-remove:hover {
-    background: #c21529ff; /* чуть темнее для эффекта наведения */
+    background: #c21529ff;
     transform: scale(1.05);
 }
-
 .btn-remove:active {
     transform: scale(0.95);
 }
