@@ -159,7 +159,7 @@ function updateProductInterface(productId, response) {
         if (quantityControls) quantityControls.style.display = 'flex';
         if (removeBtn) removeBtn.style.display = 'inline-block';
         if (quantityValue) quantityValue.textContent = response.quantity;
-    } else {
+    } else {	
         if (quantityControls) quantityControls.style.display = 'none';
         if (removeBtn) removeBtn.style.display = 'none';
         if (addBtn) addBtn.style.display = 'inline-block';
