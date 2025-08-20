@@ -255,7 +255,7 @@ if ($arResult["COMPONENT_PAGE"] == "detail") {
             $APPLICATION->AddChainItem("Тарифы", $APPLICATION->GetCurPageParam("", ["ELEMENT_CODE"]));
             $APPLICATION->AddChainItem($arElement["NAME"]);
         }
-    } else {
+    } else {    
         CHTTP::SetStatus("404 Not Found");
         @define("ERROR_404", "Y");
         return;
